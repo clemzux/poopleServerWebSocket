@@ -2,6 +2,7 @@ package fr.cfarge067.utilitary;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
+import com.google.gson.Gson;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.client.config.ClientConfig;
@@ -17,9 +18,9 @@ public class CAppConstant {
         return ourInstance;
     }
 
-    private CAppConstant() {
-    }
+    private CAppConstant() {}
 
+    public static Gson gson = new Gson();
 
     public static ObjectMapper objectMapper = new ObjectMapper();
     public static WebResource webResource;
